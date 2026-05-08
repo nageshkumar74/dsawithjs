@@ -1,0 +1,51 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Insert element is Array</title>
+        <script>
+
+// let data=[10,250,120,179];
+// let newElement=70;
+// let postion=2;
+// console.warn(`orignal data ${data}`);
+
+// for(let i=data.length-1;i>=0;i--){
+     
+//     if(i>=postion){
+
+//         data[i+1]=data[i];
+//         if(i==postion){
+//             data[i]=newElement;
+//         }
+
+//     }
+
+// }
+// console.log(data);
+
+function insert(){
+    let data=[80,30,20,10];
+    let newElement=document.getElementById('newelem').value;
+    newElement=parseInt(newElement);
+    let postion=document.getElementById("position").value;
+    for(let i=data.length-1;i>=0; i--){
+        if(i>=postion){
+            data[i+1]=data[i];
+            if(i==postion){
+                data[i]=newElement;
+            }
+        }
+         console.log(data);
+}
+    }
+    
+
+            </script>
+
+            <body>
+                <input type="text" placeholder="enter postion" id="position"/>
+                <input type="text" placeholder="enter  new element" id="newelem"/>
+               <button onCLick="insert()">Click</button>
+            </body>

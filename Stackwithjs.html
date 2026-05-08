@@ -1,0 +1,59 @@
+Lineear data structure:Stack,arrary
+NonLinear data structure:tree,graph
+Stack follows Last in First out(LIFO)
+
+<!Doctype html>
+
+<html>
+
+<head>Stack with JavaScript</head>
+
+<body>
+    <script>
+
+    let data = [];
+
+function push(value) {
+    let currentSize = data.length;
+    let max = 6;
+
+    if (currentSize < max) {
+        data[currentSize] = value;
+    } else {
+        alert("Stack Overflow");
+    }
+
+    console.log(data);
+}
+
+function pop() {
+    let currentSize = data.length;
+
+    if (currentSize > 0) {
+        let poppedValue = data[currentSize - 1];
+        data.length = currentSize - 1;
+        return poppedValue;
+    } else {
+        alert("Stack is empty");
+        return null;
+    }
+}
+
+push(10);
+push(20);
+push(30);
+push(40);
+push(60);
+push(70);
+// push(80); // overflow
+
+console.log(pop());
+console.log(pop());
+console.log(pop());
+console.log(data);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Sorting with Bubble Sorting</title>
+        <script>
+
+         let data=[65,10,40,100,23];
+            console.log(data);
+         for(let i=0;i<data.length-1;i++)
+            for(let j=0;j<data.length-1;j++){
+                if(data[j]>data[j+1]){
+                    let temp=data[j];
+                    data[j]=data[j+1];
+                data[j+1]=temp;
+                }
+            }
+         
+            console.log(`After sorting ${data}`);
+            
+        </script>
+        </head>
+        <body>
+         <input type="text" id="element"/>
+         <button onCLick="getElement()">Get </button>
+        </body>
+
+        </html>

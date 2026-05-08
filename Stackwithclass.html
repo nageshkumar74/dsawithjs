@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>StackwithClass</head>
+    <body>
+        <script>
+            class Stack{
+                item=[];
+                currentSize=0;
+                maxSize=0;
+                constructor(size){
+                    this.maxSize=size;
+                   
+                }
+                // 
+                
+                push(val){
+                    if(this.currentSize>=this.maxSize){
+                        console.log("Stack Limit Exceed");
+
+                    }
+                    else{
+                      this.item[currentSize]=val;
+                      this.currentSize=currentSize+1
+                    }
+                }
+
+                // pop(){
+                //  if(this.currentSize==0){
+                //     console.log("Stack is already empty");
+                //  }
+                //  else{
+                //     // this.item[currentSize]=[currentSize-1];
+                //     // this.currentSize=currentSize-1
+                //     this.item[currentSize]=[currentSize-1];
+                //     this.currentSize=currentSize-1
+                //  }
+                // }
+                display(){
+                    console.log(this.item)
+                }
+
+            }
+
+                let s1=new Stack(5);
+                console.log(s1);  
+                s1.push(10); 
+                s1.display();
+            
+        </script>
+    </body>
+</html>

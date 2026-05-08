@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+
+         let data=[], currentSize=data.length;
+        function push(value){
+          let newVal=document.getElementById('newElem').value;
+           
+            let max=6;
+            if(currentSize<max){
+                data[currentSize]=newVal;
+                console.log(data);
+            }
+            else{
+                alert('Stack Limit is exceed')
+            }
+            document.getElementById('newElem').value='';
+
+        }
+
+        function pop(){
+            let currentSize=data.length;
+           if(currentSize>0){
+            let poppedValue=data[currentSize-1];
+            data.length=currentSize-1;
+             console.log("poped",poppedValue);
+           }
+           else{
+            console.log('Stack is empty');
+            return null;
+           }
+        }
+
+        function display(){
+                       let currentSize=data.length;
+            for(let i=0; i<=currentSize; i++){
+                console.log(data[i]);
+            }
+        }
+        </script>
+    </head>
+    <body>
+     <input type="text" placeholder="Enter the Last element" id="newElem" >
+        <button onclick="push(1)">PUSH</button>
+        <button onclick="pop()">POP</button>
+        <button onclick="display() ">Display All element of Stack</button>
+
+  
+    </body>
+</html>

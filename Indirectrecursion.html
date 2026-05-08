@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Indirect Recursion </title>
+    <script>
+
+
+        let money = 100;
+        let apple = 0;
+
+        function getApple(x) {
+            console.warn("i have",x,"RS",apple);
+            if (x > 0) {
+                apple++;
+                buymore(x);
+            }
+            else {
+                console.log("I don't have money");
+            }
+        }
+        function buymore(x) {
+            getApple(x-20);
+        
+            console.warn("Buymore", x);
+        }
+        getApple(money);
+
+
+
+    </script>
+</head>
+
+<body>
+    <input type="text" id="element" />
+
+</body>

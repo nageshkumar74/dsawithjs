@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Search</title>
+    <script>
+        function searchElementinarray() {
+            let data = [10, 20, 30, 67, 10];
+            let searchValue = Number(document.getElementById("element").value);
+
+            let found = false;
+            let indexes = [];
+
+            for (let i = 0; i < data.length; i++) {
+                if (data[i] === searchValue) {
+                    found = true;
+                    indexes.push(i);
+                }
+            }
+
+            if (found) {
+                console.log("Element found at indexes:", indexes);
+                alert("Element found at indexes: " + indexes.join(", "));
+            } else {
+                console.log("Element not found");
+                alert("Element not found");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="element" placeholder="Enter value" />
+    <button onclick="searchElementinarray()">Get</button>
+</body>
+</html>

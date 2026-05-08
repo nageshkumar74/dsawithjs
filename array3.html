@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <script>
+         function insert(){
+
+            let arr=[1,2,3,4,5];
+
+            let newelem=document.getElementById('newElement').value;
+            let postion=document.getElementById('position').value;
+             newelem=parseInt(newelem);
+            for(let i=arr.length-1; i>=0;i--){
+                if(i>=postion){
+                    arr[i+1]=arr[i];
+                    if(i==postion){
+                        arr[i]=newelem
+                    }
+                }
+                
+            }
+            console.log(arr);
+
+
+         }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="position" placeholder="position"/>
+         <input type="text" id="newElement" placeholder="newElement"/>
+        <button onClick="insert()">Submit</button>
+    </body>
+</html>
